@@ -31,3 +31,4 @@ const linkedListValues = (head) => {
 // values = []
 // since we need "in order" we use push() array method a -> b -> c -> d
 // when the node is null we end the linked list
+

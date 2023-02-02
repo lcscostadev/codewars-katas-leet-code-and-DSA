@@ -14,11 +14,7 @@ a.next = b;
 b.next = c;
 c.next = d;
 
-const printLinkedList = (head) => {
-    if (head === null) return;
-    console.log(head.val);
-    printLinkedList(head.next);
-}
-
-printLinkedList(a);
-
+const sumList = (head) => {
+    if (head === null) return 0;
+    return head.val + sumList(head.next);
+};

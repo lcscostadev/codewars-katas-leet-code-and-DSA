@@ -14,11 +14,14 @@ a.next = b;
 b.next = c;
 c.next = d;
 
-const printLinkedList = (head) => {
-    if (head === null) return;
-    console.log(head.val);
-    printLinkedList(head.next);
+const sumList = (head) => {
+    let sum = 0;
+    let current = head;
+
+    while (current !== null) {
+        sum += current.val;
+        current = current.next;
+    }
+
+    return sum;
 }
-
-printLinkedList(a);
-
