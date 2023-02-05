@@ -1,4 +1,4 @@
-const findLinkedList = (head) => {
+const findLinkedList = (head, target) => {
     if (head === null) return false
     if (head.val === target) return true;
 
