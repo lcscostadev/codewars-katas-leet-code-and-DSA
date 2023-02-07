@@ -8,9 +8,9 @@ function Node(data) {
 }
 
 function getNth(node, index) {
-    if (!node) {
-        throw new Error(`Invalid node at ${index}`);
+    if (node !== null) {
+        return index === 0 ? node : getNth(node.next, index - 1);
+    } else {
+        throw "invalid argument";
     }
-
-    return (index === 0) ? node : getNth(node.next, index - 1);
 }
