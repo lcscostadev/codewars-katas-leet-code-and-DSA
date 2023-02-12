@@ -20,11 +20,12 @@ const sumRecursive = (head) => {
     return head.val + sumRecursive(head.next);
 }
 
-// 2- Linekd List Find
+// 2- Linked List Find
 
 // Iterative
 const findList = (head, target) => {
     let current = head;
+
     while (current !== null) {
         if (current.val === target) return true;
         current = current.next;
@@ -49,16 +50,17 @@ const getNode = (head, index) => {
 
     while (current !== null) {
         if (count === index) return current.val;
-        count++;
+        count += 1;
         current = current.next;
     }
+    return null;
 }
 
 // Recursive
 const getNodeRecursive = (head, index) => {
-
     if (head === null) return null;
     if (index === 0) return head.val;
+
     return getNodeRecursive(head.next, index - 1);
 }
 
@@ -67,7 +69,7 @@ const getNodeRecursive = (head, index) => {
 // Iterative
 const arrayLinkedList = (head) => {
     let current = head;
-    const values = [];
+    let values = []
 
     while (current !== null) {
         values.push(current.val);
@@ -78,13 +80,13 @@ const arrayLinkedList = (head) => {
 
 // Recursive
 const arrayValues = (head) => {
-    const values = [];
+    let values = [];
     pushArrayValues(head, values);
     return values;
 }
 
 const pushArrayValues = (head, values) => {
-    if (head === null) return
+    if (head === null) return;
     values.push(head.val);
     return pushArrayValues(head.next, values);
 }
@@ -93,25 +95,25 @@ const pushArrayValues = (head, values) => {
 
 // Iterative
 const reversedLinkedList = (head) => {
-    let curr = head;
-    let prev = null;
+    let current = head;
+    let previous = null;
 
-    while (curr !== null) {
-        let next = curr.next;
+    while (current !== null) {
+        const next = current.next;
 
-        curr.next = prev;
-        prev = curr;
-        curr = next;
+        current.next = previous;
+        previous = current
+        current = next;
     }
-    return prev;
+    return previous;
 }
 
 // Recursive
 const reversedLinkedListRecursive = (head, prev) => {
-    if (head === null) return prev;
-    let next = head.next;
-    head.next = prev
-    return reversedLinkedList(next, head)
+    if (head === null) return;
+    const next = head.next;
+    head.next = prev;
+    return reversedLinkedListRecursive(next, head);
 }
 
 
@@ -120,10 +122,10 @@ const reversedLinkedListRecursive = (head, prev) => {
 // Iterative
 
 const mergeLists = (l1, l2) => {
-    const dummy = new Node();
+    let dummy = new Node();
     let tail = dummy;
 
-    while (l1.val !== null && l2.val !== null) {
+    while (l1 !== null && l2 !== null) {
         if (l1.val < l2.val) {
             tail.next = l1;
             l1 = l1.next;
@@ -141,4 +143,17 @@ const mergeLists = (l1, l2) => {
     }
 
     return dummy.next;
+}
+
+// Recursive
+const mergeListsRecursive = (l1, l2) => {
+    if (!l1) return l2;
+    else if (!l2) return l1;
+    else if (l1.val <= l2.val) {
+        l1.next = mergeListsRecursive(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = mergeListsRecursive(l1, l2.next);
+        return l2;
+    }
 }
