@@ -113,3 +113,32 @@ const reversedLinkedListRecursive = (head, prev) => {
     head.next = prev
     return reversedLinkedList(next, head)
 }
+
+
+// Merge two lists
+
+// Iterative
+
+const mergeLists = (l1, l2) => {
+    const dummy = new Node();
+    let tail = dummy;
+
+    while (l1.val !== null && l2.val !== null) {
+        if (l1.val < l2.val) {
+            tail.next = l1;
+            l1 = l1.next;
+        } else {
+            tail.next = l2;
+            l2 = l2.next;
+        }
+        tail = tail.next;
+    }
+
+    if (l1 !== null) {
+        tail.next = l1;
+    } else if (l2 !== null) {
+        tail.next = l2;
+    }
+
+    return dummy.next;
+}
