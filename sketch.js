@@ -157,3 +157,17 @@ const mergeListsRecursive = (l1, l2) => {
         return l2;
     }
 }
+
+// Fibonacci
+
+const fibonacci = (num) => {
+    if (num <= 1) return num;
+    return fibonacci(number - 2) + fibonacci(num - 1);
+}
+
+// Factorial
+
+const factorial = (num) => {
+    if (num === 1) return 1;
+    return num * factorial(num - 1);
+}
