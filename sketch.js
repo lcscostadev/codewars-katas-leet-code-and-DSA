@@ -4,10 +4,11 @@
 
 // Iterative
 const sum = (head) => {
+    // we create a variable sum and we iterate with the current val of head, progress the list with current = current.next and return sum.
     let current = head;
     let sum = 0;
 
-    while (current !== null) {
+    while (head !== null) {
         sum += current.val;
         current = current.next;
     }
@@ -16,16 +17,19 @@ const sum = (head) => {
 
 // Recursive
 const sumRecursive = (head) => {
+
+    // if head is null we return 0, if not, we grab or current value and sum recursively to the next head
     if (head === null) return 0;
     return head.val + sumRecursive(head.next);
-}
+};
 
 // 2- Linked List Find
 
 // Iterative
+// Since we want to find an node in the list, we see if the current value is identical to target, if it is, we found our target and return true,
+// otherwise we return false and keep searching the list.
 const findList = (head, target) => {
     let current = head;
-
     while (current !== null) {
         if (current.val === target) return true;
         current = current.next;
@@ -34,11 +38,13 @@ const findList = (head, target) => {
 }
 
 // Recursive
+// if head is null, we know our list ended and if we didn't find it, its false, otherwise if our head.val is identical to target, we return true
+// and we return recursively our function with the head.next and target.
 const findListRecursive = (head, target) => {
     if (head === null) return false;
     if (head.val === target) return true;
 
-    return findListRecursive(head.next, target);
+    return findLinkedList(head.next, target);
 }
 
 // 3- Get Node value
@@ -57,10 +63,11 @@ const getNode = (head, index) => {
 }
 
 // Recursive
+// if its null we return null, if index is 0, it means that we are in the node we're looking for so we return the current value
+// we recursively return our function with head.next and also index - 1 because we're looping through the nodes in opposite direction.
 const getNodeRecursive = (head, index) => {
     if (head === null) return null;
     if (index === 0) return head.val;
-
     return getNodeRecursive(head.next, index - 1);
 }
 
@@ -80,13 +87,13 @@ const arrayLinkedList = (head) => {
 
 // Recursive
 const arrayValues = (head) => {
-    let values = [];
-    pushArrayValues(head, values);
+    let values = []
+    pushArrayValues(head, values)
     return values;
 }
 
 const pushArrayValues = (head, values) => {
-    if (head === null) return;
+    if (head === null) return
     values.push(head.val);
     return pushArrayValues(head.next, values);
 }
@@ -95,25 +102,12 @@ const pushArrayValues = (head, values) => {
 
 // Iterative
 const reversedLinkedList = (head) => {
-    let current = head;
-    let previous = null;
 
-    while (current !== null) {
-        const next = current.next;
-
-        current.next = previous;
-        previous = current
-        current = next;
-    }
-    return previous;
 }
 
 // Recursive
 const reversedLinkedListRecursive = (head, prev) => {
-    if (head === null) return;
-    const next = head.next;
-    head.next = prev;
-    return reversedLinkedListRecursive(next, head);
+
 }
 
 
@@ -122,52 +116,22 @@ const reversedLinkedListRecursive = (head, prev) => {
 // Iterative
 
 const mergeLists = (l1, l2) => {
-    let dummy = new Node();
-    let tail = dummy;
 
-    while (l1 !== null && l2 !== null) {
-        if (l1.val < l2.val) {
-            tail.next = l1;
-            l1 = l1.next;
-        } else {
-            tail.next = l2;
-            l2 = l2.next;
-        }
-        tail = tail.next;
-    }
-
-    if (l1 !== null) {
-        tail.next = l1;
-    } else if (l2 !== null) {
-        tail.next = l2;
-    }
-
-    return dummy.next;
 }
 
 // Recursive
 const mergeListsRecursive = (l1, l2) => {
-    if (!l1) return l2;
-    else if (!l2) return l1;
-    else if (l1.val <= l2.val) {
-        l1.next = mergeListsRecursive(l1.next, l2);
-        return l1;
-    } else {
-        l2.next = mergeListsRecursive(l1, l2.next);
-        return l2;
-    }
+
 }
 
 // Fibonacci
 
 const fibonacci = (num) => {
-    if (num <= 1) return num;
-    return fibonacci(number - 2) + fibonacci(num - 1);
+
 }
 
 // Factorial
 
 const factorial = (num) => {
-    if (num === 1) return 1;
-    return num * factorial(num - 1);
+
 }
