@@ -1,0 +1,15 @@
+#Step by Step process of solving each problem
+
+Understand the problem: Read the prompt carefully and make sure you understand what the problem is asking you to do. If there are any parts of the prompt that are unclear, ask for clarification or do some research to fill in the gaps.
+
+Break the problem down into smaller parts: Once you understand the problem, break it down into smaller, more manageable parts. This can help you identify the key steps you need to take to solve the problem.
+
+Choose an appropriate data structure and algorithm: Based on the problem and the parts you've identified, choose an appropriate data structure and algorithm to solve the problem. This may involve doing some research or reviewing your notes on data structures and algorithms.
+
+Write pseudocode: Write out a high-level description of the steps you'll need to take to solve the problem. This can help you identify any potential issues or areas where you need to do more research before you start coding.
+
+Code your solution: Once you've written your pseudocode, start writing your code. Focus on writing clean, well-organized code that's easy to read and understand.
+
+Test your solution: Once you've written your code, test it thoroughly to make sure it works as expected. Try different inputs and edge cases to make sure your code can handle a variety of scenarios.
+
+Refactor and optimize: After you've tested your code, look for ways to refactor and optimize your solution. This can involve simplifying your code, removing unnecessary steps, or finding more efficient algorithms.

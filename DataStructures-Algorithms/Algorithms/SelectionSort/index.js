@@ -1,7 +1,5 @@
-
-const selectionSort = (arr) => {
+function selectionSort(arr) {
     const n = arr.length;
-
     for (let i = 0; i < n - 1; i++) {
         let min_idx = i;
         for (let j = i + 1; j < n; j++) {
@@ -16,5 +14,6 @@ const selectionSort = (arr) => {
     return arr;
 }
 
+// Example Usage:
 const arr = [64, 34, 25, 12, 22, 11, 90];
-console.log(selectionSort(arr));
+console.log(selectionSort(arr)); // Output: [ 11, 12, 22, 25, 34, 64, 90 ]
