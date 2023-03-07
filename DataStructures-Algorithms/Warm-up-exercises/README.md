@@ -1,8 +1,8 @@
 #Here goes all the exercises that i need to solve, one each day, just to practice
 
-Write a function to check if a given number is even or odd.
-Write a function to convert a temperature from Fahrenheit to Celsius.
-Write a function to calculate the area of a circle.
+Write a function to check if a given number is even or odd. [DONE!]
+Write a function to convert a temperature from Fahrenheit to Celsius. [DONE!]
+Write a function to calculate the area of a circle. [DONE!]
 Write a function to calculate the factorial of a given number.
 Write a function to calculate the sum of all numbers in an array.
 Write a function to reverse a string.
