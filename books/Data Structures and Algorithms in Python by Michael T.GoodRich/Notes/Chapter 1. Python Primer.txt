@@ -1,0 +1,8 @@
+creating a new instance of a class is knwo as instantiation, the syntax for instantiating an object is to invoke the constructor of a class.
+
+
+class Widget(a,b,c)
+
+
+instance of this class:
+w = Widget(a,b,c)

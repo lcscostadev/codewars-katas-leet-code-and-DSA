@@ -1,0 +1,42 @@
+#include <cs50.h>
+#include <stdio.h>
+int main(void)
+{
+    int height, count;
+
+    count = 0;
+
+    // The user only can type positive numbers, no strings and can't be more than 8
+    do
+    {
+        height = get_int("How high you want your pyramid? ");
+    } while (height < 1 || height > 8);
+
+    // Only can loop from the max height to 1
+    for (int i = height; i > 0; i--)
+    {
+        // Print the spaces
+        for (int j = 1; j < i; j++)
+        {
+            printf(" ");
+        }
+
+        // Print the hash
+        for (int j = 0; j < count + 1; j++)
+        {
+            printf("#");
+        }
+        // Print the space between the pyramids
+        printf("  ");
+
+        // Print's the second half of the pyramid
+        for (int j = 0; j < count + 1; j++)
+        {
+            printf("#");
+        }
+
+        // Print's a new line and increment count
+        printf("\n");
+        count++;
+    }
+}

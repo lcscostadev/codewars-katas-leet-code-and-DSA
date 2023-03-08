@@ -1,0 +1,36 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // TODO: Prompt for start size (->DONE<-)
+    int starting_population, ending_population, n, birth_rate, death_rate;
+
+    do{
+       printf("Type the starting population size: ");
+       scanf("%i", &starting_population);
+    } while(starting_population < 9);
+
+    printf("Starting size is: %i \n", starting_population);
+
+    // TODO: Prompt for end size (->DONE<-)
+    do{
+        printf("Enter the ending population size: ");
+        scanf("%i", &ending_population);
+    }while(ending_population < starting_population);
+    printf("Ending size is: %i \n", ending_population);
+
+    // TODO: Calculate number of years until we reach threshold
+    n = 0;
+    birth_rate = starting_population / 3;
+    death_rate = starting_population / 4;
+
+    while(starting_population < ending_population) {
+        starting_population = starting_population + birth_rate - death_rate;
+        birth_rate = starting_population / 3;
+        death_rate = starting_population / 4;
+        n++;
+    }
+    // TODO: Print number of years
+    printf("It took %i years to reach or exceed the ending population\n", n);
+}

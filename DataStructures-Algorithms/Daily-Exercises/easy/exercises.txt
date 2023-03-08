@@ -1,0 +1,7 @@
+Given an array of integers, find the maximum sum of any contiguous subarray of the array.
+Given two sorted arrays, merge them into a single sorted array.
+Implement a stack using two queues.
+Implement a queue using two stacks.
+Easy: Given a string, check if it is a palindrome (i.e., reads the same forwards and backwards).
+Easy: Given an array of integers, find the sum of all the even integers in the array.
+Easy: Given an array of integers, find the second largest integer in the array.

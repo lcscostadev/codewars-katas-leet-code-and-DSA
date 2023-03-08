@@ -1,0 +1,12 @@
+Super Easy:
+
+Given a string, check if it is a palindrome. [DONE!]
+
+Implement a binary search algorithm.
+
+Given a binary tree, determine if it is a valid binary search tree.
+Given a string, find the first non-repeating character in it.
+
+Super Easy: Given an array of integers, find the largest integer in the array.
+Super Easy: Given an array of integers, find the smallest positive integer that is not in the array.
+Super Easy: Given a string, reverse it.
