@@ -1,0 +1,4 @@
+Ensuring that the base case is well-defined and will eventually be reached.
+Avoiding excessive recursion by ensuring that each recursive call reduces the problem size.
+Optimizing performance by using memoization or other techniques to avoid unnecessary recomputations.
+Testing the function thoroughly to ensure that it works correctly for all input values.

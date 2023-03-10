@@ -1,0 +1,79 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // I have to add credit long, digits, num_digits, double_digits, sum
+    long card_number = get_long("Type your credit card number: ");
+    long card_copy = card_number; // Make a copy of the original card number
+    int sum = 0, num_digits = 0, digit, double_digits;
+
+    while (card_number > 0)
+    {
+        // going through every digit
+        num_digits++;
+        // way of getting the last number of the long card_number
+        digit = card_number % 10;
+        card_number /= 10;
+
+        // if the position of the number is in an even index AKA second-last-position
+        if (num_digits % 2 == 0)
+        {
+            // we multiply the digits by 2
+            double_digits = digit * 2;
+            // we check if the double digit is greater than 9, if it is, we do -9 since on this algorithms is explicit telling this condition, so i've decided to make an ternary operator to look prettier
+            sum += (double_digits > 9) ? (double_digits - 9) : double_digits;
+        }
+        else
+        {
+            sum += digit;
+        }
+    }
+
+    // sum % 10 == 0 is basically to check if the last number ends in 0
+    if (sum % 10 == 0 && card_copy >= 340000000000000 && card_copy < 350000000000000)
+    {
+        printf("%li \n", card_copy);
+        printf("AMERICAN EXPRESS\n");
+    }
+    else if (sum % 10 == 0 && card_copy >= 370000000000000 && card_copy < 380000000000000)
+    {
+        printf("%li \n", card_copy);
+        printf("AMERICAN EXPRESS\n");
+    }
+    else if (sum % 10 == 0 && card_copy >= 5100000000000000 && card_copy < 5600000000000000)
+    {
+        printf("%li \n", card_copy);
+        printf("MASTERCARD\n");
+    }
+    else if ((card_copy >= 4000000000000 && card_copy < 5000000000000) ||
+             (card_copy >= 4000000000000000 && card_copy < 5000000000000000))
+    {
+        printf("%li \n", card_copy);
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+}
+
+// American express 15 digits -> starts <- with 34 or 37
+
+// MasterCard 16 digits -> starts <- with 51,52,53,54 or 55
+
+// Visa 13 or 16 digits -> starts <- with 4
+
+// Write a program that prompts the user for a credit card number and then reports (via printf) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each’s format herein. So that we can automate some tests of your code, we ask that your program’s last line of output be AMEX\n or MASTERCARD\n or VISA\n or INVALID\n, nothing more, nothing less. For simplicity, you may assume that the user’s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card) and that it won’t have leading zeroes. But do not assume that the user’s input will fit in an int! Best to use get_long from CS50’s library to get users’ input. (Why?)
+
+// Starting withe the second-last-digit we multiply every other digit by 2, jumping a number
+// Now let’s add those products’ digits (i.e., not the products themselves) together:
+
+// 2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13
+
+// Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end):
+
+// 13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20
+// If the sum ends in a 0, the card is valid
+
+// Depending how much numbers user type in and the patterns, he has an visa, mastercard, or american express

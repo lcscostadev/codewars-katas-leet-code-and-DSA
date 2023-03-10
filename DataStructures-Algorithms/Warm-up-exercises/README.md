@@ -3,9 +3,9 @@
 Write a function to check if a given number is even or odd. [DONE!]
 Write a function to convert a temperature from Fahrenheit to Celsius. [DONE!]
 Write a function to calculate the area of a circle. [DONE!]
-Write a function to calculate the factorial of a given number.
-Write a function to calculate the sum of all numbers in an array.
-Write a function to reverse a string.
+Write a function to calculate the factorial of a given number. [DONE!]
+Write a function to calculate the sum of all numbers in an array. [DONE!]
+Write a function to reverse a string. [DONE!]
 Write a function to remove all whitespace from a string.
 Write a function to find the maximum number in an array.
 Write a function to count the number of vowels in a string.

@@ -1,0 +1,5 @@
+Identifying the optimal substructure of the problem, which allows you to break it down into smaller subproblems.
+Defining a recursive relation that expresses the solution to the problem in terms of solutions to its subproblems.
+Using memoization or tabulation to store and reuse solutions to subproblems.
+Ensuring that the cache or table is large enough to store all necessary results.
+Testing the function thoroughly to ensure that it works correctly for all input values.
