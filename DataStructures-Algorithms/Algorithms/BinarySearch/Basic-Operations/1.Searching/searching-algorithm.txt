@@ -1,0 +1,8 @@
+If the key value is equal to root key then, search successful, if lesser than root key then search the key in the left subtree and if the key is greater than root key then search the key in the right subtree.
+
+Check if tree is NULL, if the tree is not NULL then follow the following steps.
+Compare the key to be searched with the root of the BST.
+If the key is lesser than the root then search in the left subtree.
+If the key is greater than the root then search in the right subtree.
+If the key is equal to root then, return and print search successful.
+Repeat step 3, 4 or 5 for the obtained subtree.

@@ -1,0 +1,7 @@
+Deletion in BST involves three cases:-
+
+First, search the key to be deleted using searching algorithm and find the node. Then, find the number of children of the node to be deleted.  
+
+Case 1- If the node to be deleted is leaf node: If the node to be deleted is a leaf node, then delete it.
+Case 2- If the node to be deleted has one child: If the node to be deleted has one child then, delete the node and place the child of the node at the position of the deleted node.
+Case 3- If the node to be deleted has two children: If the node to be deleted has two children then, find the inorder successor or inorder predecessor of the node according to the nearest capable value of the node to be deleted. Delete the inorder successor or predecessor using the above cases. Replace the node with the inorder successor or predecessor. 

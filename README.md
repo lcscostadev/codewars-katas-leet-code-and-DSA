@@ -39,4 +39,4 @@ Here goes a roadmap that im following to become a better logic developer:
 
 ## Social
 
-You can follow me on twitter [twitter](https://twitter.com/lcscostadev)
+You can follow me on [twitter](https://twitter.com/lcscostadev)

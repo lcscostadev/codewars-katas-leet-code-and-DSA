@@ -1,0 +1,9 @@
+There are 4 types of traversals of the Binary Search Tree.
+
+Level Order Traversal: Each node of the tree is traversed level by level in order of its appearance.
+
+Pre-order Traversal: The nodes are traversed in the format of root and then left subtree and then right subtree.
+
+Inorder Traversal: The nodes are traversed in the format of left subtree and then root and then right subtree.
+
+Post Traversal: The nodes are traversed in the format of left subtree  and then right subtree and then root
