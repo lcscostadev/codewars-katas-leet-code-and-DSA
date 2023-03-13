@@ -8,8 +8,8 @@ Write a function to calculate the sum of all numbers in an array. [DONE!]
 Write a function to reverse a string. [DONE!]
 Write a function to remove all whitespace from a string. [DONE!]
 Write a function to find the maximum number in an array. [DONE!]
-Write a function to count the number of vowels in a string.
-Write a function to check if a given string is a palindrome.
+Write a function to count the number of vowels in a string. [DONE!]
+Write a function to check if a given string is a palindrome. [DONE!]
 Write a function to find the longest word in a string.
 Write a function to remove duplicates from an array.
 Write a function to check if two strings are anagrams.
